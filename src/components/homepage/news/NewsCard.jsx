@@ -1,26 +1,20 @@
-import { getNewsDetailsById } from '@/lib/data';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaEye, FaShareSquare, FaStar } from 'react-icons/fa';
 import { IoBookmarksSharp } from 'react-icons/io5';
 
-const NewsDetailsPage =async ({params}) => {
-    const {id} = await params;
-    console.log(id,"Pera");
-    const news = await getNewsDetailsById(id);
-    console.log(news);
+const NewsCard = ({ news }) => {
+    console.log(news, "news");
     return (
-        <div className='max-w-5xl mx-auto'>
-            <div className="card bg-base-100 shadow-sm">
+        <div className="card bg-base-100 shadow-sm">
             <div className="card-body">
                 <figure>
                 <Image
                     src={news.image_url}
                     alt={news.title}
                     width={350}
-                    height={300}
-                    className='w-full' />
+                    height={300} />
             </figure>
             <p className='truncate'>{news.details}</p>
                 {/* Author Info */}
@@ -37,11 +31,11 @@ const NewsDetailsPage =async ({params}) => {
                 </div>
                 <h2 className="card-title">{news.title}</h2>
             </div>
-            <p className=''>{news.details}</p>
+            <p className='line-clamp-3'>{news.details}</p>
             <div className='flex justify-between items-center'>
                 <div className='flex gap-4 items-center'>
                     <h2 className='flex gap-2 items-center'>
-                        <FaStar className='text-lg text-yellow-500' />{news?.rating?.number}
+                        <FaStar className='text-lg text-yellow-500' />{news.rating.number}
                     </h2>
                    <h2 className='flex gap-4 items-center'>
                      <FaEye />{news.total_view}
@@ -52,8 +46,7 @@ const NewsDetailsPage =async ({params}) => {
                 </Link>
             </div>
         </div>
-        </div>
     );
 };
 
-export default NewsDetailsPage;
+export default NewsCard;
