@@ -8,7 +8,7 @@ const LeftSidebar = ({categories,activeId}) => {
             <ul className="flex flex-col gap-3 mt-4">
                 {
                     categories.news_category.map(category => {
-                        return <li key={category.category_id} className={`${activeId === category.category_id && "bg-gray-300"} rounded-md text-center font-bold text-md`}>
+                        return <li key={category.category_id} className={`${activeId === category.category_id && "bg-blue-700 text-white"} rounded-md text-center font-bold text-md`}>
                             <Link href={`/category/${category.category_id}`}className='block p-2 '>{""}{category.category_name}</Link>
                             </li>
                     })
