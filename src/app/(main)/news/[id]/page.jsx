@@ -1,4 +1,5 @@
 import { getNewsDetailsById } from '@/lib/data';
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -47,8 +48,8 @@ const NewsDetailsPage =async ({params}) => {
                      <FaEye />{news.total_view}
                    </h2>
                 </div>
-                <Link href={`/news/${news._id}`}>
-                 <button className='btn '>See Details</button>
+                <Link href={`/category/${news.category_id}`}>
+                 <button className='btn btn-accent'>See Other News For This Category<ArrowRight></ArrowRight></button>
                 </Link>
             </div>
         </div>

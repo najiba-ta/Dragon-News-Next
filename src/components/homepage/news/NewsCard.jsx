@@ -14,7 +14,8 @@ const NewsCard = ({ news }) => {
                     src={news.image_url}
                     alt={news.title}
                     width={350}
-                    height={300} />
+                    height={300}
+                    className='w-full' />
             </figure>
             <p className='truncate'>{news.details}</p>
                 {/* Author Info */}
@@ -42,7 +43,7 @@ const NewsCard = ({ news }) => {
                    </h2>
                 </div>
                 <Link href={`/news/${news._id}`}>
-                 <button className='btn '>See Details</button>
+                 <button className='btn btn-accent'>See Details</button>
                 </Link>
             </div>
         </div>
