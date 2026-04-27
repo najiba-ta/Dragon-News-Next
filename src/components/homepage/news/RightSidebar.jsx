@@ -19,7 +19,7 @@ const RightSidebar =() => {
   }
   return (
     <div>
-      <h2 className="font-bold text-lg mb-4">Login With</h2>
+      <h2 className="font-bold text-lg mb-4">Login with</h2>
       <div className="flex flex-col gap-4">
         <button className="btn btn-dash text-yellow-500" onClick={handleGoogleSignin}><FaGoogle /> Login with google</button>
         <button className="btn btn-dash text-pink-600" onClick={handleGithubSignin}><FaGithub /> Login with github</button>
