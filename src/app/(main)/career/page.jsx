@@ -4,7 +4,7 @@ const CareerPAge = () => {
     return (
         <div>
          <h2>
-             Career Page  
+             Career Page  .......
          </h2>
         </div>
     );
