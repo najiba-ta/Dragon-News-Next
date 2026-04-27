@@ -3,7 +3,7 @@ import React from 'react';
 const CareerPAge = () => {
     return (
         <div>
-          About Us Page  
+          Career Page  
         </div>
     );
 };
